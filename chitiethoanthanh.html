@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="shortcut icon" href="https://www.kfcvietnam.com.vn/assets/images/favicon-32.ico" type="image/vnd.microsoft.icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <title>HKK Combo Burger Phi-lê Gà Quay</title>
+    <style>
+    body 
+    {
+        background-color: #f8f9fa;
+        font-family:'Times New Roman', Times, serif;
+    }
+    
+    body 
+    {
+        padding-top: 50px; 
+        font-family:'Times New Roman', Times, serif;
+    }
+
+    .menu
+    {
+        color: white;
+        font-size: 20px;;
+    }
+
+    .navtext
+    {
+        font-size: 25px;
+    }
+
+    li
+    {
+        margin-right: 30px;
+    }
+
+    .a
+    {
+        background-color: white;
+        border-radius: 10px;
+        border: 1px solid rgb(119, 98, 98);
+        text-align: center;
+        margin-bottom: 30px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+        overflow: hidden;    
+    }
+
+    .a:hover 
+    {
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .b
+    {
+        color: black;
+        font-weight: bold;
+        font-size: 30px;
+    }
+
+    .b:hover
+    {
+        color:#3d3d3d;
+        text-decoration: none;
+    }
+
+    .c
+    {
+        max-height: 100%;
+        max-width: 100%;
+        transition: transform 0.7s ease;
+    }
+
+    .zoom
+    {
+        width: 89%;
+        border-radius: 10px;
+        border: 1px solid rgb(119, 98, 98);
+        overflow: hidden;
+        text-align: center;
+        margin-left: 15px;
+        margin-top: 20px;
+    }
+    .c:hover
+    {
+        transform: scale(1.1);
+    }
+
+    .footer 
+    {
+        background-color: #4e565d;
+        padding: 20px;
+        text-align: center;
+    }
+
+    #logo
+    {
+        max-width: 100px;
+    }
+
+    .foot
+    {
+        position: relative;
+    }
+
+    .foot img
+    {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .hotline
+    {
+      background-color:#f7f6f4;
+      z-index: 1;
+      position: absolute;
+      bottom: 90px;
+      left: 770px;
+      font-size: 35px;
+      text-align: center;
+      color: #ea0404;
+    }
+
+    @media screen and (max-width: 1200px) 
+    {
+    .hotline 
+        {
+            position: static;
+            font-size: 25px; 
+        }
+    }
+
+    hr
+    {
+        border-top: 2px solid black;
+        padding-bottom: 20px;
+    }
+/*Thực đơn*/
+
+    .chude
+    {
+        display: flex;
+        position: relative;
+        max-width: 100%;
+    }
+
+
+    .hr-text 
+    {
+        position: absolute;
+        top: 36%;
+        width: 100%;
+        border: none;
+        border-top: 2px solid #000;
+    }
+    .monan
+    {
+        color: black;
+        font-weight: bold;
+    }
+
+    .monan:hover
+    {
+        color:#3d3d3d;
+        text-decoration: none;
+    }
+
+    .cost
+    {
+        text-align: right;
+        margin-right: 10px;
+        font-size: 25px;
+        font-weight: bold;
+    }
+    .sale
+    {
+        text-align: right;
+        margin-right: 10px;
+        color: #ea0404;
+        font-weight: bold;
+        font-size: 30px;
+    }
+    .detail
+    {
+        font-weight: normal;
+        text-align: center;
+        padding-left:5px;
+        padding-right:5px ;
+        font-size: 11px;
+    }
+
+    .nutan-container 
+    {
+        text-align: center;
+        margin-left: 10px;
+    }
+
+    .nutan 
+    {
+        max-width: 100%;
+        margin-bottom: 10px ;
+        margin-top: 10px;
+        padding: 5px 50px 5px 50px;
+        border: 1px solid #ea0404; 
+        border-radius: 20px; 
+        background-color: #ea0404; 
+        color: white;
+        display: inline-block;
+        font-size: 20px; 
+        transition: background-color 0.3s, color 0.3s; 
+    }
+
+    .nutan:hover 
+    {
+        background-color: #b21919; 
+        border-color: #b21919; 
+        text-decoration: none; 
+        color: white;
+    }
+    .title
+    {
+        margin-top: 10px;
+        margin-left: 10px;
+        word-wrap: break-word;
+        text-align: left;
+        font-size: 30px;
+    }
+    .detail
+    {
+        font-weight: normal;
+        text-align: center;
+        padding-left:5px;
+        padding-right:5px ;
+        font-size: 17px;
+    }
+
+    #scrollToTopBtn 
+    {
+        width: 120px;
+        display: none; 
+        position: fixed;
+        bottom: 30px; 
+        right: 30px; 
+        z-index: 2; 
+        padding: 10px;
+        font-size: 70px;
+        transform: rotate(-90deg);
+        border: none;
+        outline: none;
+        background-color: #ea0404; 
+        color: white; 
+        cursor: pointer;
+        border-radius: 50%;
+        transition: background-color 0.5s; 
+    }
+
+    #scrollToTopBtn:hover 
+    {
+        background-color: #b21919; 
+    }
+
+    /*---------------------Giỏ hàng--------------------------*/
+    
+    .cart
+    {
+        color: white;
+        width: 50%;
+        margin: auto;
+        text-align: center;
+        padding-top: 30px;
+        position: fixed;
+        height: 100vh;
+        width: 550px;
+        top: 0;
+        background-color: #dc3545;
+        padding: 12px 20px;
+        overflow-y: scroll;
+        z-index: 3;
+        right: -100%;
+        transition: all 0.5s ease;
+    }
+
+    .cart table
+    {
+        width:100%;
+
+    }
+
+    .cart table thead tr th:first-child
+    {
+        text-align: left;
+    }
+
+    .cart table thead tr th:last-child
+    {
+        text-align: right;
+    }
+
+    .cart table tbody tr td
+    {
+        border-bottom: 1px solid black;
+        padding: 12px 0;
+    }
+
+    .cart table tbody tr td:last-child
+    {
+        text-align: right;
+    }
+
+    .cart i
+    {
+        position: sticky;
+        cursor: pointer;
+        margin-left:450px;
+        margin-bottom: 20px;
+        margin-top: 17px;
+        font-size: 15   px;
+    }
+
+    .tensp
+    {
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+    .tensp img
+    {
+        width: 70px;
+    }
+    .soluong input
+    {
+        width: 30px;
+        outline: none;
+    }
+    .chon
+    {
+        cursor: pointer;
+    }
+    .tongtien 
+    {
+        font-weight: bold;
+        text-align: right;
+    }
+
+    /*-----Carousel----*/
+    .owl-carousel .item {
+        margin: 5px;
+        background-color:#f8f9fa;
+    }
+
+    .owl-carousel .item img 
+    {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    .owl-carousel .nav-button 
+    {
+        border: 1px solid black;  
+        border-radius: 50%;
+        height: 70px;
+        width: 25px;
+        cursor: pointer;
+        position:absolute;
+        top: 180px;
+        }
+    .owl-carousel .owl-prev.disabled,
+    .owl-carousel .owl-next.disabled
+    {
+        pointer-events: none;
+        opacity: 0.25;
+    }
+    .owl-carousel .owl-prev 
+    {
+        left: -35px;
+    }
+    .owl-carousel .owl-next 
+    {
+        right: -35px;
+    }
+    .owl-theme .owl-nav [class*=owl-] 
+    {
+        color: #ea0404;
+        font-size: 39px;
+        background: #f8f9fa;
+        border-radius: 10px;
+    }
+
+    .owl-dots 
+    {
+        display: none;
+    }
+
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-danger fixed-top" style="z-index: 1;">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="Layout.html">
+            <img src="kfclogo.png" id="logo">
+            </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav navtext">
+              <li class="nav-item dropdown" style="cursor: pointer;">
+                <a class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown">
+                Thực đơn
+                </a>
+                <div class="dropdown-menu bg-danger">
+                    <a href="Layout.html?id=monanchinh" class="dropdown-item menu">Món ăn chính</a>
+                    <a href="Layout.html?id=nuvatm" class="dropdown-item menu">Tráng miệng & nước uống</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="thucdontest.html">Món ăn</a>
+              </li>
+              <li class="nav-item">
+                <a href="Layout.html?id=uudai" class="nav-link">Ưu đãi</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="">Địa chỉ</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav navtext ml-auto">
+              <li class="nav-item">
+              <div class="nav-link">
+                <i class="fas fa-shopping-cart giohang" style="cursor:pointer">&nbsp; Giỏ Hàng</i>
+              </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+    <div class="container mt-5 mb-5">
+        <div class="row mb-5 boss">
+            <div class="col-md-6">
+                <div class="zoom">
+                    <img src="https://static.kfcvietnam.com.vn/images/items/lg/COMBO-BURGER-FLAVA.jpg?v=gOqQQL" class="c">
+                </div>
+            </div>
+            <div class="col-md-6 mt-5">
+                <div class="a">
+                    <div class="monan">
+                        <div class="title">
+                            Combo Burger Phi-lê Gà Quay 
+                        </div>
+                        <div class="cost">
+                            Giá:
+                           <del>77.000đ</del>
+                       </div>
+                       <div class="sale">
+                           <span>62.000</span>đ
+                       </div>
+                        <div class="detail">
+                            1 Burger Flava + 1 Khoai Tây Chiên (vừa) + 1 Pepsi (lớn)
+                        </div>
+                        <div class="nutan-container">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <button class="nutan">Thêm vào giỏ &nbsp;<i class="fa fa-shopping-cart"></i></button>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="shopcartinfor">
+                                        <img src="https://static.kfcvietnam.com.vn/images/items/lg/COMBO-BURGER-FLAVA.jpg?v=gOqQQL" style="display: none;">
+                                        <h1 style="display: none;">Combo Burger Phi-lê Gà Quay </h1>
+                                        <span style="display: none;">62.000</span>
+                                        <button class="nutan giohang">Mua Ngay!</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!--owl carousel-->
+    <div class="container owl mt-5">
+        <h1>Có thể bạn sẽ thích</h1>
+        <hr>
+        <div class="owl-carousel owl-theme"style="z-index: 0;">
+            <div class="item">
+                <div class="a">
+                    <div class="monan">
+                        <div class="zoom">
+                            <img src="https://static.kfcvietnam.com.vn/images/items/lg/pepsi-zero.jpg" class="c">
+                        </div>
+                        <div class="title" >
+                            Pepsi Không Calo Lon
+                        </div>
+                        <div class="cost">
+                             Giá:
+                            <div>19.000đ</div>
+                        </div>
+                        <div class="detail">
+                            Pepsi Không Calo Lon
+                        </div>
+                        <div class="nutan-container">
+                            <a href="#" class="nutan">Xem ngay!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="a">
+                    <div class="monan">
+                        <div class="zoom">
+                            <img src="https://static.kfcvietnam.com.vn/images/items/lg/PEPSI_CAN.jpg?v=L5KYPg" class="c">
+                        </div>
+                        <div class="title" >
+                            Pepsi Lon &emsp; &emsp; &emsp; &emsp;
+                        </div>
+                        <div class="cost">
+                             Giá:
+                            <div>19.000đ</div>
+                        </div>
+                        <div class="detail">
+                            Pepsi Lon
+                        </div>
+                        <div class="nutan-container">
+                            <a href="#" class="nutan">Xem ngay!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="a">
+                    <div class="monan">
+                        <div class="zoom">
+                            <img src="https://static.kfcvietnam.com.vn/images/items/lg/AQUAFINA.jpg?v=L5KYPg" class="c">
+                        </div>
+                        <div class="title" >
+                            Aquafina 500ml &emsp;&emsp;
+                        </div>
+                        <div class="cost">
+                             Giá:
+                            <div>15.000đ</div>
+                        </div>
+                        <div class="detail">
+                            Aquafina 500ml
+                        </div>
+                        <div class="nutan-container">
+                            <a href="#" class="nutan">Xem ngay!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="a">
+                    <div class="monan">
+                        <div class="zoom">
+                            <img src="https://static.kfcvietnam.com.vn/images/items/lg/7UP_CAN.jpg?v=L5KYPg" class="c">
+                        </div>
+                        <div class="title" >
+                            7Up Lon &emsp; &emsp; &emsp; &emsp;
+                        </div>
+                        <div class="cost">
+                             Giá:
+                            <div>19.000đ</div>
+                        </div>
+                        <div class="detail">
+                            7Up Lon
+                        </div>
+                        <div class="nutan-container">
+                            <a href="#" class="nutan">Xem ngay!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="a">
+                    <div class="monan">
+                        <div class="zoom">
+                            <img src="https://static.kfcvietnam.com.vn/images/items/lg/1-Fried-Chicken.jpg?v=gOqQQL" class="c">
+                        </div>
+                        <div class="title" >
+                            1 Miếng Gà Rán &emsp; &emsp;
+                        </div>
+                        <div class="cost">
+                             Giá:
+                            <div>35.000đ</div>
+                        </div>
+                        <div class="detail">
+                            1 Miếng Gà Rán Giòn  
+                        </div>
+                        <div class="nutan-container">
+                            <a href="#" class="nutan">Xem ngay!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                    <div class="a">
+                        <div class="monan">
+                            <div class="zoom">
+                                <img src="https://static.kfcvietnam.com.vn/images/items/lg/2-Fried-Chicken.jpg?v=L5KYPg" class="c">
+                            </div>
+                            <div class="title">
+                                2 Miếng Gà Rán &emsp; &emsp;
+                            </div>
+                            <div class="cost">Giá:
+                                <div>70.000đ</div>
+                            </div>
+                            <div class="detail">2 Miếng Gà Rán Giòn </div>
+                            <div class="nutan-container">
+                            <a href="#" class="nutan">Xem ngay!</a></div>
+                        </div>
+                    </div>
+            </div>
+            <div class="item">
+                <div class="a">
+                    <div class="monan">
+                        <div class="zoom">
+                            <img src="https://static.kfcvietnam.com.vn/images/items/lg/2-Pumcheese.jpg?v=L5KYPg" class="c">
+                        </div>
+                        <div class="title" >
+                            2 Thanh Bí Phô Mai
+                        </div>
+                        <div class="cost">
+                             Giá:
+                            <div>29.000đ</div>
+                        </div>
+                        <div class="detail">
+                            2 Thanh Bí Phô Mai
+                        </div>
+                        <div class="nutan-container">
+                            <a href="#" class="nutan">Xem ngay!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="a">
+                    <div class="monan">
+                        <div class="zoom">
+                            <img src="https://static.kfcvietnam.com.vn/images/items/lg/MOD-PHI-LE-GA-QUAY.jpg?v=L5KYPg" class="c">
+                        </div>
+                        <div class="title" >
+                            1 Miếng Phi-lê Gà Quay
+                        </div>
+                        <div class="cost">
+                             Giá:
+                            <div>39.000đ</div>
+                        </div>
+                        <div class="detail">
+                            1 Miếng Phi-lê Gà Quay 
+                        </div>
+                        <div class="nutan-container">
+                            <a href="#" class="nutan">Xem ngay!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="a">
+                    <div class="monan">
+                        <div class="zoom">
+                            <img src="https://static.kfcvietnam.com.vn/images/items/lg/POP-R.jpg?v=L5KYPg" class="c">
+                        </div>
+                        <div class="title" >
+                            Gà Viên(vừa) &emsp; &emsp;&emsp;
+                        </div>
+                        <div class="cost">
+                             Giá:
+                            <div>38.000đ</div>
+                        </div>
+                        <div class="detail">
+                            Gà Viên(vừa)
+                        </div>
+                        <div class="nutan-container">
+                            <a href="#" class="nutan">Xem ngay!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="a">
+                    <div class="monan">
+                        <div class="zoom">
+                            <img src="https://static.kfcvietnam.com.vn/images/items/lg/3_Nuggests.jpg?v=L5KYPg" class="c">
+                        </div>
+                        <div class="title" >
+                           3 Gà Miếng Nuggets
+                        </div>
+                        <div class="cost">
+                             Giá:
+                            <div>38.000đ</div>
+                        </div>
+                        <div class="detail">
+                            3 Gà Miếng Nuggets
+                        </div>
+                        <div class="nutan-container">
+                            <a href="#" class="nutan">Xem ngay!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="a">
+                    <div class="monan">
+                        <div class="zoom">
+                            <img src="https://static.kfcvietnam.com.vn/images/items/lg/Burger-Zinger.jpg?v=L5KYPg" class="c">
+                        </div>
+                        <div class="title" >
+                            Burger Zinger &emsp; &emsp;
+                        </div>
+                        <div class="cost">
+                             Giá:
+                            <div>54.000đ</div>
+                        </div>
+                        <div class="detail">
+                            1 Burger Zinger 
+                        </div>
+                        <div class="nutan-container">
+                            <a href="#" class="nutan">Xem ngay!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="a">
+                    <div class="monan">
+                        <div class="zoom">
+                            <img src="https://static.kfcvietnam.com.vn/images/items/lg/Burger-Shrimp.jpg?v=L5KYPg" class="c">
+                        </div>
+                        <div class="title" >
+                           Burger Tôm &emsp; &emsp;&emsp;
+                        </div>
+                        <div class="cost">
+                             Giá:
+                            <div>45.000đ</div>
+                        </div>
+                        <div class="detail">
+                            1 Burger Tôm
+                        </div>
+                        <div class="nutan-container">
+                            <a href="#" class="nutan">Xem ngay!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $(".owl-carousel").owlCarousel({
+                    loop:true,
+                    margin:10,
+                    responsiveClass:true,
+                    navText: ["<div class='nav-button owl-prev'>‹</div>", "<div class='nav-button owl-next'>›</div>"],
+                    responsive:{
+                        0:{
+                            items:1,
+                            nav:true
+                        },
+                        600:{
+                            items:3,
+                            nav:false
+                        },
+                        1000:{
+                            items:4,
+                            nav:true,
+                            loop:false
+                        }
+                    }
+                });
+            });
+        </script>
+    </div>
+    <!--shop cart-->
+    <section class="cart">
+        <i class="fas fa-times"></i>
+        <h2 style="font-size: 25px; font-weight: bold;">Giỏ Hàng</h2>
+        <form>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Sản phẩm</th>
+                        <th>Giá</th>
+                        <th>Số lượng</th> 
+                        <th>Chọn</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="tensp"><img src="https://static.kfcvietnam.com.vn/images/items/lg/Burger-Shrimp.jpg" alt="">Burger Tôm</td>
+                        <td><span>54.000</span>đ</td>
+                        <td class="soluong"><input type="number" value="1" min="1"></td>
+                        <td class="chon">Xóa</td>
+                    </tr>
+                    <tr>
+                        <td class="tensp"><img src="https://static.kfcvietnam.com.vn/images/items/lg/2-Pumcheese.jpg?v=L5KYPg" alt="">2 Thanh Bí Phô Mai</td>
+                        <td><span>29.000</span>đ</td>
+                        <td class="soluong"><input type="number" value="1" min="1"></td>
+                        <td class="chon">Xóa</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="tongtien">
+                <p>Tổng tiền: <span>0.000</span>đ</p>
+            </div>
+            <div class="nutan-container">
+                <button href="#" class="nutan">Thanh toán</button>
+            </div>
+        </form>
+    </section>
+    <!-- Chân -->
+        <div class="foot">
+            <img src="https://static.kfcvietnam.com.vn/images/content/home/mobileappbanner/lg/banner.jpg?v=L7BKr3">
+            <div class="hotline">
+                Liên hệ với chúng tôi qua đường dây nóng:
+                <br>
+                1900 6886  
+            </div>
+        </div>
+    <footer class="footer">
+      <div class="container">
+        <span>Copyright &copy; 2024 HKK Vietnam </span>
+      </div>
+    </footer>
+    <script src="shopcart.js"></script>
+    <script src="navbar.js"></script>
+    <script src="navbar2.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>    
+</body>
