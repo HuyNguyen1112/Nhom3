@@ -134,11 +134,95 @@
         }
     }
 
+    /*---------------------Giỏ hàng--------------------------*/
+    
+    .cart
+    {
+        color: white;
+        width: 50%;
+        margin: auto;
+        text-align: center;
+        padding-top: 30px;
+        position: fixed;
+        height: 100vh;
+        width: 550px;
+        top: 0;
+        background-color: #dc3545;
+        padding: 12px 20px;
+        overflow-y: scroll;
+        z-index: 3;
+        right: -100%;
+        transition: all 0.5s ease;
+    }
+
+    .cart table
+    {
+        width:100%;
+
+    }
+
+    .cart table thead tr th:first-child
+    {
+        text-align: left;
+    }
+
+    .cart table thead tr th:last-child
+    {
+        text-align: right;
+    }
+
+    .cart table tbody tr td
+    {
+        border-bottom: 1px solid black;
+        padding: 12px 0;
+    }
+
+    .cart table tbody tr td:last-child
+    {
+        text-align: right;
+    }
+
+    .cart i
+    {
+        position: sticky;
+        cursor: pointer;
+        margin-left:450px;
+        margin-bottom: 20px;
+        margin-top: 17px;
+        font-size: 15   px;
+    }
+
+    .tensp
+    {
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+    .tensp img
+    {
+        width: 70px;
+    }
+    .soluong input
+    {
+        width: 30px;
+        outline: none;
+    }
+    .chon
+    {
+        cursor: pointer;
+    }
+    .tongtien 
+    {
+        font-weight: bold;
+        text-align: right;
+    }
+
+
   </style>
 </head>
 <body>
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-md navbar-dark bg-danger fixed-top">
+  <nav class="navbar navbar-expand-md navbar-dark bg-danger fixed-top" style="z-index: 2;">
     <div class="container-fluid">
       <a class="navbar-brand" href="Layout.html">
         <img src="kfclogo.png" id="logo">
@@ -321,6 +405,45 @@
     1900  6886  
     </div>
   </div>
+
+  <!--shop cart-->
+  <section class="cart">
+    <i class="fas fa-times"></i>
+    <h2 style="font-size: 25px; font-weight: bold;">Giỏ Hàng</h2>
+    <form>
+        <table>
+            <thead>
+                <tr>
+                    <th>Sản phẩm</th>
+                    <th>Giá</th>
+                    <th>Số lượng</th> 
+                    <th>Chọn</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tensp"><img src="https://static.kfcvietnam.com.vn/images/items/lg/Burger-Shrimp.jpg" alt="">Burger Tôm</td>
+                    <td><span>54.000</span>đ</td>
+                    <td class="soluong"><input type="number" value="1" min="1"></td>
+                    <td class="chon">Xóa</td>
+                </tr>
+                <tr>
+                    <td class="tensp"><img src="https://static.kfcvietnam.com.vn/images/items/lg/2-Pumcheese.jpg?v=L5KYPg" alt="">2 Thanh Bí Phô Mai</td>
+                    <td><span>29.000</span>đ</td>
+                    <td class="soluong"><input type="number" value="1" min="1"></td>
+                    <td class="chon">Xóa</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="tongtien">
+            <p>Tổng tiền: <span>0.000</span>đ</p>
+        </div>
+        <div class="nutan-container">
+            <button href="#" class="nutan">Thanh toán</button>
+        </div>
+    </form>
+</section>
+
   <!-- Chân -->
   <footer class="footer">
     <div class="container">
@@ -328,6 +451,7 @@
     </div>
   </footer>
   <!-- Bootstrap JS -->
+  <script src="shopcart.js"></script>
   <script src="navbar.js"></script>
   <script src="navbar2.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
