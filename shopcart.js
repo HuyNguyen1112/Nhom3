@@ -93,5 +93,5 @@ cartshow.addEventListener("click",function()
 })
 cartbnt.addEventListener("click",function()
 {
-    document.querySelector(".cart").style.right="-100%"
+    document.querySelector(".cart").style.right="-150%"
 })
